@@ -1,0 +1,138 @@
+.post {
+  background-color: var(--gray-800);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.post + .post {
+  margin-top: 2rem;
+}
+
+.post > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > header time {
+  font-size: 0.875rem;
+  color: var(--gray-400)
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  align-itens: center;
+}
+
+.authorInfo span {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+
+.authorInfo strong {
+  font-size: 1rem;
+  color: var(--gray-100);
+  line-height: 1.6;
+}
+
+.content {
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content span {
+  margin-right: 0.5rem;
+}
+
+.content a {
+  color: var(--green-500);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.content a:hover {
+  color: var(--green-300);
+}
+
+.commentForm {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-700);
+}
+
+.commentForm > h4 {
+  font-size: 1rem;
+  color: var(--gray-100);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.commentForm textarea {
+  width: 100%;
+  background-color: var(--gray-900);
+  resize: none;
+  height: 6rem;
+  padding: 1rem;
+  border: 0;
+  border-radius: 8px;
+  color: var(--gray-100);
+  line-height: 1.4;
+  margin: 1rem 0;
+  outline: 0;
+
+  transition: all 0.5s;
+}
+
+.commentForm textarea:focus {
+  color: var(--gray-300);
+}
+
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: 100px;
+}
+
+.commentForm button {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 0;
+  background-color: var(--green-500);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.commentForm button:hover:not(:disabled) {
+  background-color: var(--green-300);
+}
+
+.commentForm button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.comments {
+  margin-top: 2rem;
+}
